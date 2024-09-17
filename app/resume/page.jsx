@@ -25,7 +25,7 @@ const about = {
             fieldValue: "1+ Years"
         },
         {
-            fieldName: "Instagrem",
+            fieldName: "Instagram",
             fieldValue: "@nurfaiz26"
         },
         {

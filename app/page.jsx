@@ -18,18 +18,20 @@ const Home = () => {
                 Hello I'm <br /> <span className="text-accent">Muhammad Nur Faiz</span>
               </h1>
               <p className="max-w-[500px] mb-9 text-white/80">
-                I excel at craftinh elegant digital experiences and I am proficient in varioius programming languages and technologies
+                I am proficient in varioius programming languages and technologies
               </p>
               {/* btn and socials */}
               <div className="flex flex-col xl:flex-row items-center gap-8">
-                <Button
-                  variant="outline"
-                  size="lg" c
-                  lassName="uppercase flex items-center gap-2"
-                >
-                  <span>Download CV</span>
-                  <FiDownload className="text-xl" />
-                </Button>
+                <a href="/assets/cv-en.pdf" target="_blank">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    lassName="uppercase flex items-center gap-2"
+                  >
+                    <span>Download CV</span>
+                    <FiDownload className="text-xl" />
+                  </Button>
+                </a>
                 <div className="mb-8 xl:mb-0">
                   <Social
                     containerStyles="flex gap-6"

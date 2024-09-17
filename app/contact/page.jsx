@@ -34,8 +34,24 @@ const info = [
 ]
 
 import { motion } from "framer-motion"
+import { useState } from 'react';
 
 const Contact = () => {
+    const [email, setEmail] = useState('');
+    const [firstname, setFirstname] = useState('');
+    const [lastname, setLastname] = useState('');
+    const [phone, setPhone] = useState('');
+    const [service, setService] = useState('');
+    const [text, setText] = useState('');
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const phoneNumber = "6281334407008"; // Replace with the recipient's phone number
+        let message =`Name\t: ${firstname} ${lastname}\nEmail\t: ${email}\nPhone\t: ${phone}\nService\t: ${service}\nMessage\t:\n${text}`
+
+        window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
+    };
+
     return (
         <motion.section
             initial={{ opacity: 0 }}
@@ -46,36 +62,64 @@ const Contact = () => {
                 <div className="flex flex-col xl:flex-row gap-[30px]">
                     {/* form */}
                     <div className="xl:w-[54%] order-2 xl:order-none">
-                        <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+                        <form onSubmit={handleSubmit} className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
                             <h3 className="text-4xl text-accent">Let's work together</h3>
-                            <p className="text-white/60">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, hic.</p>
+                            <p className="text-white/60">Sent your message by whatsApp</p>
                             {/* input */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <Input type="firsname" placeholder="Firstname" />
-                                <Input type="lastname" placeholder="Lastname" />
-                                <Input type="email" placeholder="Email address" />
-                                <Input type="phone" placeholder="Phone number" />
+                                <Input
+                                    value={firstname}
+                                    onChange={(e) => setFirstname(e.target.value)}
+                                    type="text"
+                                    placeholder="Firstname"
+                                />
+                                <Input
+                                    value={lastname}
+                                    onChange={(e) => setLastname(e.target.value)}
+                                    type="text"
+                                    placeholder="Lastname"
+                                />
+                                <Input
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    type="email"
+                                    placeholder="Email address"
+                                />
+                                <Input
+                                    value={phone}
+                                    onChange={(e) => setPhone(e.target.value)}
+                                    type="tel"
+                                    placeholder="Phone number"
+                                />
                             </div>
                             {/* select */}
-                            <Select>
+                            <Select
+                                value={service}
+                                onValueChange={(value) => {
+                                  setService(value)
+                                }}
+                            >
                                 <SelectTrigger>
                                     <SelectValue placeholder="Select a service" />
                                 </SelectTrigger>
                                 <SelectContent>
                                     <SelectGroup>
                                         <SelectLabel>Select a service</SelectLabel>
-                                        <SelectItem value="est">Web Development</SelectItem>
-                                        <SelectItem value="cst">Mobile Development</SelectItem>
-                                        <SelectItem value="mst">Fullstack Development</SelectItem>
+                                        <SelectItem value="Web Development">Web Development</SelectItem>
+                                        <SelectItem value="Mobile Development">Mobile Development</SelectItem>
+                                        <SelectItem value="Machine Learning">Machine Learning Development</SelectItem>
+                                        <SelectItem value="Integration and Deployment">Integration and Deployment</SelectItem>
                                     </SelectGroup>
                                 </SelectContent>
                             </Select>
                             <Textarea
+                                value={text}
+                                onChange={(e) => setText(e.target.value)}
                                 className="h-[200px]"
                                 placeholder="Type your message here."
                             />
                             {/* button */}
-                            <Button size="md" className="max-w-40 p-2">
+                            <Button type="submit" size="md" className="max-w-40 p-2">
                                 Send message
                             </Button>
                         </form>

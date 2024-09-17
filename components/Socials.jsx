@@ -4,9 +4,9 @@ import Link from "next/link";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa"
 
 const socials = [
-    { icon: <FaGithub />, path: '' },
-    { icon: <FaLinkedin />, path: '' },
-    { icon: <FaInstagram />, path: '' },
+    { icon: <FaGithub />, path: 'https://github.com/nurfaiz26' },
+    { icon: <FaLinkedin />, path: 'https://www.linkedin.com/in/mnurfaiz/' },
+    { icon: <FaInstagram />, path: 'https://www.instagram.com/nurfaiz26/' },
 ]
 
 const Social = ({ containerStyles, iconStyles }) => {
@@ -17,6 +17,7 @@ const Social = ({ containerStyles, iconStyles }) => {
                     return (
                         <>
                             <Link
+                                target="_blank"
                                 key={index}
                                 href={item.path}
                                 className={iconStyles}

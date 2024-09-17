@@ -9,26 +9,22 @@ const services = [
     {
         num: '01',
         title: "Web Development",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, placeat?",
-        href: ""
+        description: "Developing fullstack web application with ReactJs, NextJs, ExpressJs, Laravel, Django, Tailwind, and Bootstrap",
     },
     {
         num: '02',
-        title: "UI/UX Design",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, placeat?",
-        href: ""
+        title: "Mobile Development",
+        description: "Developing mobile application with Flutter and android native with Kotlin.",
     },
     {
         num: '03',
-        title: "Logo Design",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, placeat?",
-        href: ""
+        title: "Machine Learning",
+        description: "Experienced developing machine learning model for image classification with Vision Transformer architecture.",
     },
     {
         num: '04',
-        title: "SEO",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, placeat?",
-        href: ""
+        title: "Integration and Deployment",
+        description: "Integrating APIs and deploy application into online hosting with CPanel.",
     },
 ]
 
@@ -55,12 +51,11 @@ const Services = () => {
                                     <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
                                         {service.num}
                                     </div>
-                                    <Link
-                                        href={service.href}
-                                        className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:rotate-45"
+                                    {/* <Link
+                                        className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
                                     >
                                         <BsArrowDownRight className="text-primary text-3xl" />
-                                    </Link>
+                                    </Link> */}
                                 </div>
                                 {/* heading */}
                                 <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">{service.title}</h2>
