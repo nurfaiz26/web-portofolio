@@ -111,7 +111,7 @@ const Work = () => {
     return (
         <motion.section
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: {delay: 2.4, duration: 0.4, ease: "easeIn"} }}
+            animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeIn" } }}
             className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
         >
             <div className="container mx-auto">
@@ -135,7 +135,7 @@ const Work = () => {
                                 {project.description}
                             </p>
                             {/* project stacks */}
-                            
+
                             <ul className="flex flex-wrap gap-4">
                                 {project.stack.map((item, index) => {
                                     return (
@@ -147,11 +147,11 @@ const Work = () => {
                                     )
                                 })}
                             </ul>
-                            
+
                             {/* border */}
                             <div className="border border-white/20"></div>
                             {/* button */}
-                            <div className="flex items-center gap-4">
+                            <div className="flex items-center gap-4  xl:pb-12">
                                 {/* live project button */}
                                 <Link href={project.live} target="_blank">
                                     <TooltipProvider delayDuration={100}>
@@ -212,7 +212,7 @@ const Work = () => {
                                 )
                             })}
                             {/* slider buttons */}
-                            <WorkSliderBtns 
+                            <WorkSliderBtns
                                 containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
                                 btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
                             />
