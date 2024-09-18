@@ -6,7 +6,7 @@ import React, { useState } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 
-import { BsArrowUpRight, BsGithub } from "react-icons/bs"
+import { BsArrowUpRight, BsGithub, BsTypeH1 } from "react-icons/bs"
 
 import {
     Tooltip,
@@ -22,41 +22,42 @@ import WorkSliderBtns from "@/components/WorkSliderBtns"
 const projects = [
     {
         num: "01",
-        category: "Frontend",
-        title: "Project 1",
-        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, reprehenderit?',
+        category: "Backend and AR Development",
+        title: "Mirai",
+        description: 'Mirai is a make up online shop afiliation application with real time virtual make application with computer vision. Developed with Flutter for the mobile frontend and Python CV2',
         stack: [
-            { name: "HTML 5" },
-            { name: "CSS 3" },
-            { name: "Javascript" },
+            { name: "Flutter" },
+            { name: "Dart" },
+            { name: "Python" },
+            { name: "CV2" },
         ],
-        image: "/assets/work/patani.png",
-        live: "",
-        github: "",
+        image: "/assets/work/hallotax.png",
+        live: "https://drive.google.com/file/d/1GEMMFg93ImFN37JCdHO6N1-0ZRfJgl2y/view?usp=sharing",
+        github: "https://github.com/HalloTaxApps/mobile-v2",
     },
     {
         num: "02",
-        category: "Frontend",
-        title: "Project 1",
-        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, reprehenderit?',
+        category: "Mobile & Backend Development",
+        title: "HalloTax",
+        description: 'HalloTax is an application for tax consultation. Developed with Flutter for the mobile frontend and Laravel for backend',
         stack: [
-            { name: "HTML 5" },
-            { name: "CSS 3" },
-            { name: "Javascript" },
+            { name: "Flutter" },
+            { name: "Dart" },
+            { name: "Laravel" },
+            { name: "PHP" },
         ],
-        image: "/assets/work/patani.png",
-        live: "",
-        github: "",
+        image: "/assets/work/hallotax.png",
+        live: "https://drive.google.com/file/d/1GEMMFg93ImFN37JCdHO6N1-0ZRfJgl2y/view?usp=sharing",
+        github: "https://github.com/HalloTaxApps/mobile-v2",
     },
     {
         num: "03",
-        category: "Frontend",
-        title: "Project 1",
-        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, reprehenderit?',
+        category: "Mobile Development",
+        title: "Patani",
+        description: 'Patani is an application for connecting between farmers and buyers with price prediction feature using time series. The frontend side is an Android native application developed with Kotlin and Jetpack Compose',
         stack: [
-            { name: "HTML 5" },
-            { name: "CSS 3" },
-            { name: "Javascript" },
+            { name: "Android" },
+            { name: "Kotlin" }
         ],
         image: "/assets/work/patani.png",
         live: "",
@@ -64,13 +65,17 @@ const projects = [
     },
     {
         num: "04",
-        category: "Frontend",
-        title: "Project 1",
-        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, reprehenderit?',
+        category: "Web Fullstack & Machine Learning Development",
+        title: "Ichwunden",
+        description: 'Ichwunden is an application for detecting Intracaranial Hemorrhage Classification using Vision Transformer architecture. Developed with ReactJs for the frontend web, Expressjs for the backend web, and Django for backend Machine Learning process',
         stack: [
-            { name: "HTML 5" },
-            { name: "CSS 3" },
             { name: "Javascript" },
+            { name: "ReactJs" },
+            { name: "ExpressJs" },
+            { name: "MySQL" },
+            { name: "Tailwind" },
+            { name: "Python" },
+            { name: "Django" },
         ],
         image: "/assets/work/patani.png",
         live: "",
@@ -78,13 +83,15 @@ const projects = [
     },
     {
         num: "05",
-        category: "Frontend",
-        title: "Project 1",
-        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, reprehenderit?',
+        category: "Frontend Development",
+        title: "Web Portofolio",
+        description: 'This web application is the one what you see it right now. Developed with NextJs, Tailwind, and Framer Motion',
         stack: [
             { name: "HTML 5" },
             { name: "CSS 3" },
             { name: "Javascript" },
+            { name: "NextJs" },
+            { name: "Tailwind" },
         ],
         image: "/assets/work/patani.png",
         live: "",
@@ -116,15 +123,20 @@ const Work = () => {
                                 {project.num}
                             </div>
                             {/* project category */}
-                            <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                                {project.category} project
+                            <h2 className="text-[48px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+                                {project.title}
                             </h2>
+                            {/* project category */}
+                            <h3 className="text-[24px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+                                {project.category} project
+                            </h3>
                             {/* project description */}
                             <p className="text-white/60">
                                 {project.description}
                             </p>
                             {/* project stacks */}
-                            <ul className="flex gap-4">
+                            
+                            <ul className="flex flex-wrap gap-4">
                                 {project.stack.map((item, index) => {
                                     return (
                                         <li key={index} className="text-xl text-accent">
@@ -135,12 +147,13 @@ const Work = () => {
                                     )
                                 })}
                             </ul>
+                            
                             {/* border */}
                             <div className="border border-white/20"></div>
                             {/* button */}
                             <div className="flex items-center gap-4">
                                 {/* live project button */}
-                                <Link href={project.live}>
+                                <Link href={project.live} target="_blank">
                                     <TooltipProvider delayDuration={100}>
                                         <Tooltip>
                                             <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -154,7 +167,7 @@ const Work = () => {
                                 </Link>
 
                                 {/* live github button */}
-                                <Link href={project.github}>
+                                <Link href={project.github} target="_blank">
                                     <TooltipProvider delayDuration={100}>
                                         <Tooltip>
                                             <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">

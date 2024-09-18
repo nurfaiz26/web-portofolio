@@ -54,6 +54,11 @@ const experience = {
     description: 'Here are my experiences building some projects:',
     items: [
         {
+            company: "Agile Teknik",
+            position: "Backend & AR Development",
+            duration: "August 2022 - November 2022"
+        },
+        {
             company: "PT Otak Kanan",
             position: "Backend Laravel Developer Intern",
             duration: "January 2023 - July 2023"
@@ -70,7 +75,7 @@ const experience = {
         },
         {
             company: "Politeknik Elektronika Negeri Surabaya",
-            position: "Machine Learning Developer Final Project",
+            position: "Machine Learning Final Project",
             duration: "August 2023 - July 2024"
         },
         {
@@ -104,13 +109,8 @@ const education = {
         },
         {
             institution: "Politeknik Elektronika Negeri Surabaya",
-            degree: "Applied Informatics Engineering Bachelor",
+            degree: "Applied Bachelor of Informatics Engineering",
             duration: "2020 - 2024"
-        },
-        {
-            institution: "Bangkit Academy",
-            degree: "Mobile Development",
-            duration: "2023 - 2024"
         },
         {
             institution: "PKS Digital School",
@@ -131,6 +131,11 @@ const education = {
             institution: "Dicoding Academy",
             degree: "Android Jetpack Compose",
             duration: "2023"
+        },
+        {
+            institution: "Bangkit Academy",
+            degree: "Mobile Development",
+            duration: "2023 - 2024"
         },
         {
             institution: "Kominfo VSGA Digital Talent Scholarship",
@@ -158,7 +163,7 @@ const education = {
 // skills data
 const skills = {
     title: "My skills",
-    description: "Here are some tech stacks that i\'ve experienced:",
+    description: "Here are some tech stacks that i have experienced:",
     skilllist: [
         {
             icon: <FaHtml5 />,
