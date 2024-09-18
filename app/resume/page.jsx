@@ -1,6 +1,6 @@
 "use client"
-import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si"
+import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs, FaPython, FaPhp } from "react-icons/fa";
+import { SiTailwindcss, SiNextdotjs, SiFlutter, SiKotlin, SiJetpackcompose, SiLaravel, SiDjango, SiDart, SiExpress } from "react-icons/si"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@radix-ui/react-tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 // about data
 const about = {
     title: 'About me',
-    description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, reprehenderit?',
+    description: 'Here is my biography:',
     info: [
         {
             fieldName: "Name",
@@ -51,37 +51,42 @@ const about = {
 const experience = {
     icon: '',
     title: "My experience",
-    description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, reprehenderit?',
+    description: 'Here are my experiences building some projects:',
     items: [
         {
-            company: "Tech Solutions Inc.",
-            position: "Fullstack Developer",
-            duration: "2022 - Present"
+            company: "PT Otak Kanan",
+            position: "Backend Laravel Developer Intern",
+            duration: "January 2023 - July 2023"
         },
         {
-            company: "Tech Solutions Inc.",
-            position: "Fullstack Developer",
-            duration: "2022 - Present"
+            company: "PT Otak Kanan",
+            position: "Mobile Flutter Developer Intern",
+            duration: "January 2023 - July 2023"
         },
         {
-            company: "Tech Solutions Inc.",
-            position: "Fullstack Developer",
-            duration: "2022 - Present"
+            company: "Bangkit Academy",
+            position: "Mobile Development Capstone Project",
+            duration: "November 2023 - January 2024"
         },
         {
-            company: "Tech Solutions Inc.",
-            position: "Fullstack Developer",
-            duration: "2022 - Present"
+            company: "Politeknik Elektronika Negeri Surabaya",
+            position: "Machine Learning Developer Final Project",
+            duration: "August 2023 - July 2024"
         },
         {
-            company: "Tech Solutions Inc.",
-            position: "Fullstack Developer",
-            duration: "2022 - Present"
+            company: "Politeknik Elektronika Negeri Surabaya",
+            position: "ReactJs Frontend Final Project",
+            duration: "August 2023 - July 2024"
         },
         {
-            company: "Tech Solutions Inc.",
-            position: "Fullstack Developer",
-            duration: "2022 - Present"
+            company: "Politeknik Elektronika Negeri Surabaya",
+            position: "ExpressJs Backend Final Project",
+            duration: "August 2023 - July 2024"
+        },
+        {
+            company: "Politeknik Elektronika Negeri Surabaya",
+            position: "Django Backend Final Project",
+            duration: "August 2023 - July 2024"
         },
     ]
 }
@@ -90,37 +95,62 @@ const experience = {
 const education = {
     icon: '',
     title: "My Education",
-    description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, reprehenderit?',
+    description: 'Here are my education background and certifications:',
     items: [
         {
-            institution: "Tech Solutions Inc.",
-            degree: "Fullstack Developer",
-            duration: "2022 - Present"
+            institution: "State High School 6 Surabaya",
+            degree: "Science Major",
+            duration: "2017 - 2020"
         },
         {
-            institution: "Tech Solutions Inc.",
-            degree: "Fullstack Developer",
-            duration: "2022 - Present"
+            institution: "Politeknik Elektronika Negeri Surabaya",
+            degree: "Applied Informatics Engineering Bachelor",
+            duration: "2020 - 2024"
         },
         {
-            institution: "Tech Solutions Inc.",
-            degree: "Fullstack Developer",
-            duration: "2022 - Present"
+            institution: "Bangkit Academy",
+            degree: "Mobile Development",
+            duration: "2023 - 2024"
         },
         {
-            institution: "Tech Solutions Inc.",
-            degree: "Fullstack Developer",
-            duration: "2022 - Present"
+            institution: "PKS Digital School",
+            degree: "ReactJs Frontend",
+            duration: "2023"
         },
         {
-            institution: "Tech Solutions Inc.",
-            degree: "Fullstack Developer",
-            duration: "2022 - Present"
+            institution: "PLCC Politeknik Elektronika Surabaya",
+            degree: "TOEFL PEPT Score 460",
+            duration: "2023"
         },
         {
-            institution: "Tech Solutions Inc.",
-            degree: "Fullstack Developer",
-            duration: "2022 - Present"
+            institution: "Dicoding Academy",
+            degree: "Android Intermediate",
+            duration: "2023"
+        },
+        {
+            institution: "Dicoding Academy",
+            degree: "Android Jetpack Compose",
+            duration: "2023"
+        },
+        {
+            institution: "Kominfo VSGA Digital Talent Scholarship",
+            degree: "Junior Mobile Programmer",
+            duration: "2024"
+        },
+        {
+            institution: "Dicoding Academy",
+            degree: "Flutter Fundamental",
+            duration: "2024"
+        },
+        {
+            institution: "Badan Nasional Sertifikasi Profesi",
+            degree: "Junior Mobile Programmer",
+            duration: "2024"
+        },
+        {
+            institution: "The British Institute",
+            degree: "English for Business Communication ",
+            duration: "2024"
         },
     ]
 }
@@ -128,7 +158,7 @@ const education = {
 // skills data
 const skills = {
     title: "My skills",
-    description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, reprehenderit?',
+    description: "Here are some tech stacks that i\'ve experienced:",
     skilllist: [
         {
             icon: <FaHtml5 />,
@@ -139,28 +169,60 @@ const skills = {
             name: 'CSS3',
         },
         {
+            icon: <SiTailwindcss />,
+            name: 'Tailwind CSS',
+        },
+        {
             icon: <FaJs />,
             name: 'JavaScript',
-        },
-        {
-            icon: <FaReact />,
-            name: 'ReactJs',
-        },
-        {
-            icon: <FaFigma />,
-            name: 'Figma',
         },
         {
             icon: <FaNodeJs />,
             name: 'NodeJs',
         },
         {
+            icon: <FaReact />,
+            name: 'ReactJs',
+        },
+        {
             icon: <SiNextdotjs />,
             name: 'NextJs',
         },
         {
-            icon: <SiTailwindcss />,
-            name: 'Tailwind CSS',
+            icon: <SiExpress />,
+            name: 'ExpressJs',
+        },
+        {
+            icon: <SiDart />,
+            name: 'Dart',
+        },
+        {
+            icon: <SiFlutter />,
+            name: 'Flutter',
+        },
+        {
+            icon: <SiKotlin />,
+            name: 'Kotlin',
+        },
+        {
+            icon: <SiJetpackcompose />,
+            name: 'Jetpack Compose',
+        },
+        {
+            icon: <FaPython />,
+            name: 'Python',
+        },
+        {
+            icon: <SiDjango />,
+            name: 'Django',
+        },
+        {
+            icon: <FaPhp />,
+            name: 'PHP',
+        },
+        {
+            icon: <SiLaravel />,
+            name: 'Laravel',
         },
     ]
 
@@ -175,7 +237,7 @@ const Resume = () => {
                 transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
             }}
 
-            className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+            className="min-h-[80vh] flex py-12 xl:py-0"
         >
             <div className="container mx-auto">
                 <Tabs
@@ -205,7 +267,7 @@ const Resume = () => {
                                                     className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                                                 >
                                                     <span className="text-accent">{item.duration}</span>
-                                                    <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                                                    <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left line-clamp-2">
                                                         {item.position}
                                                     </h3>
                                                     <div className="flex items-center gap-3">
@@ -234,7 +296,7 @@ const Resume = () => {
                                                     className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                                                 >
                                                     <span className="text-accent">{item.duration}</span>
-                                                    <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                                                    <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left line-clamp-2">
                                                         {item.degree}
                                                     </h3>
                                                     <div className="flex items-center gap-3">
@@ -250,7 +312,7 @@ const Resume = () => {
                             </div>
                         </TabsContent>
                         {/* skills */}
-                        <TabsContent value="skills" className="w-full h-full">
+                        <TabsContent value="skills" className="w-full h-full mb-0 xl:mb-12">
                             <div className="flex flex-col gap-[30px]">
                                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                                     <h3 className="text-4xl font-bold">{skills.title}</h3>
