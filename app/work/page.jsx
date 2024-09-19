@@ -94,7 +94,7 @@ const projects = [
             { name: "Tailwind" },
         ],
         image: "/assets/work/portofolio.png",
-        live: "https://faiz-portofolio-iota.vercel.app/",
+        live: "https://nur-faiz.vercel.app/",
         github: "https://github.com/nurfaiz26/web-portofolio",
     },
 ]
