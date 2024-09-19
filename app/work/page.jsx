@@ -31,9 +31,9 @@ const projects = [
             { name: "Python" },
             { name: "CV2" },
         ],
-        image: "/assets/work/hallotax.png",
-        live: "https://drive.google.com/file/d/1GEMMFg93ImFN37JCdHO6N1-0ZRfJgl2y/view?usp=sharing",
-        github: "https://github.com/HalloTaxApps/mobile-v2",
+        image: "/assets/work/mirai.jpg",
+        live: "https://play.google.com/store/apps/details?id=com.mirai.mirai_app",
+        github: "https://github.com/AppMirai",
     },
     {
         num: "02",
@@ -60,8 +60,8 @@ const projects = [
             { name: "Kotlin" }
         ],
         image: "/assets/work/patani.png",
-        live: "",
-        github: "",
+        live: "https://drive.google.com/file/d/1Glrq-x_QG-7kCaq-Kkkes1vTzX6vNIFK/view?usp=sharing",
+        github: "https://github.com/AbdanulIkhlas/Capstone-Project-CH2-PS160",
     },
     {
         num: "04",
@@ -77,9 +77,9 @@ const projects = [
             { name: "Python" },
             { name: "Django" },
         ],
-        image: "/assets/work/patani.png",
-        live: "",
-        github: "",
+        image: "/assets/work/ichwunden.png",
+        live: "https://ichwunden.my.id/",
+        github: "https://github.com/nurfaiz26",
     },
     {
         num: "05",
@@ -93,9 +93,9 @@ const projects = [
             { name: "NextJs" },
             { name: "Tailwind" },
         ],
-        image: "/assets/work/patani.png",
-        live: "",
-        github: "",
+        image: "/assets/work/portofolio.png",
+        live: "https://faiz-portofolio-iota.vercel.app/",
+        github: "https://github.com/nurfaiz26/web-portofolio",
     },
 ]
 
@@ -195,7 +195,7 @@ const Work = () => {
                                         key={index}
                                         className="w-full"
                                     >
-                                        <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                                        <div className="h-[420px] relative group flex justify-center items-center bg-pink-50/20">
                                             {/* overlay */}
                                             <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                                             {/* image */}
