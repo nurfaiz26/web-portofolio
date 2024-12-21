@@ -97,6 +97,46 @@ const projects = [
         live: "https://nur-faiz.vercel.app/",
         github: "https://github.com/nurfaiz26/web-portofolio",
     },
+    {
+        num: "06",
+        category: "Fullstack Web Development",
+        title: "Pre Order Management",
+        description: 'Application for pre order purchasing management',
+        stack: [
+            { name: "HTML 5" },
+            { name: "CSS 3" },
+            { name: "Laravel" },
+            { name: "PHP" },
+            { name: "MySQL" },
+            { name: "SQL" },
+            { name: "NodeJS" },
+            { name: "Javascript" },
+            { name: "Tailwind" },
+        ],
+        image: "/assets/work/manajemenpo.png",
+        live: "",
+        github: "",
+    },
+    {
+        num: "07",
+        category: "Fullstack Web Development",
+        title: "Hotline Monitoring App",
+        description: 'Application for monitoring and analyse hotline chats',
+        stack: [
+            { name: "HTML 5" },
+            { name: "CSS 3" },
+            { name: "Laravel" },
+            { name: "PHP" },
+            { name: "MySQL" },
+            { name: "SQL" },
+            { name: "NodeJS" },
+            { name: "Javascript" },
+            { name: "Tailwind" },
+        ],
+        image: "/assets/work/hotlinemonitoring.png",
+        live: "",
+        github: "",
+    },
 ]
 
 const Work = () => {
@@ -153,32 +193,36 @@ const Work = () => {
                             {/* button */}
                             <div className="flex items-center gap-4  xl:pb-12">
                                 {/* live project button */}
-                                <Link href={project.live} target="_blank">
-                                    <TooltipProvider delayDuration={100}>
-                                        <Tooltip>
-                                            <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                                                <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
-                                            </TooltipTrigger>
-                                            <TooltipContent>
-                                                <p>Live project</p>
-                                            </TooltipContent>
-                                        </Tooltip>
-                                    </TooltipProvider>
-                                </Link>
+                                {project.live !== '' ? (
+                                    <Link href={project.live} target="_blank">
+                                        <TooltipProvider delayDuration={100}>
+                                            <Tooltip>
+                                                <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                                                    <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
+                                                </TooltipTrigger>
+                                                <TooltipContent>
+                                                    <p>Live project</p>
+                                                </TooltipContent>
+                                            </Tooltip>
+                                        </TooltipProvider>
+                                    </Link>
+                                ) : null}
 
                                 {/* live github button */}
-                                <Link href={project.github} target="_blank">
-                                    <TooltipProvider delayDuration={100}>
-                                        <Tooltip>
-                                            <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                                                <BsGithub className="text-white text-3xl group-hover:text-accent" />
-                                            </TooltipTrigger>
-                                            <TooltipContent>
-                                                <p>Github repository</p>
-                                            </TooltipContent>
-                                        </Tooltip>
-                                    </TooltipProvider>
-                                </Link>
+                                {project.github !== '' ? (
+                                    <Link href={project.github} target="_blank">
+                                        <TooltipProvider delayDuration={100}>
+                                            <Tooltip>
+                                                <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                                                    <BsGithub className="text-white text-3xl group-hover:text-accent" />
+                                                </TooltipTrigger>
+                                                <TooltipContent>
+                                                    <p>Github repository</p>
+                                                </TooltipContent>
+                                            </Tooltip>
+                                        </TooltipProvider>
+                                    </Link>
+                                ) : null}
                             </div>
                         </div>
                     </div>

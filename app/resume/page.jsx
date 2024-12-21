@@ -40,8 +40,8 @@ const about = {
             fieldValue: "mnurfaiz26@gmail.com"
         },
         {
-            fieldName: "Freelance",
-            fieldValue: "Available"
+            fieldName: "Work Status",
+            fieldValue: "IT Staff of Nurul Hayat"
         },
         {
             fieldName: "Languanges",
@@ -95,6 +95,11 @@ const experience = {
             company: "Politeknik Elektronika Negeri Surabaya",
             position: "Django Backend Final Project",
             duration: "August 2023 - July 2024"
+        },
+        {
+            company: "Nurul Hayat",
+            position: "IT Staff: Fullstack Web Developer",
+            duration: "October 2024 - Current"
         },
     ]
 }
